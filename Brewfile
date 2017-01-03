@@ -1,6 +1,8 @@
 ##
 # SixArm Brew Brewfile
 #
+# CAUTION: THIS IS A WORK IN PROGRESS. IT MAY NOT WORK YET.
+#
 # We use this Brewfile for our teams and their developer laptops.
 #
 # This file installs many apps, including office suites, multimedia suites,
@@ -26,19 +28,28 @@
 #
 # This file has a bunch of sections:
 #
-#   * Browsers
-#   * Shells
-#   * Passwords
-#   * Editors
-#   * Downloaders
-#   * Terminals
-*   * Version control
+#   * Browsers: firefox, google-chrome, opera, ...
+#   * Passwords: keybase, 1password, lastpass, ...
+#   * Terminals: iterm2, tmux, screen, ...
+#   * Shells: bash, zsh, fish, mosh, ...
+#   * Editors: vim, emacs, atom, sublime, ...
+#   * Downloaders: curl, wget, cask, carthage, ...
+*   * Version control: git, hg, svn, cvs, ...
 #   * GNU command line tools
+#   * System related: TODO
+#   * File compression: zstd, unrar, unzip, ...
+#   * File synchronization: rsync, unison, syncthing, ...
+#   * Text search: ripgrep, ag, sift, ...
 #   * Operating-related
 #   * Build tools
-#   * Fonts
+#   * Fonts: hundreds of fonts
 #   * JetBrains programmer tools
 #   * OmniGroup project management tools
+#   * Database servers: postgresql, redis, ...
+#   * Database searchers: sphinx, TODO
+#   * Database managers: TODO
+#   * Markup languages: pandoc, TODO
+#   * Programming languages: Java, Node, Python, ...
 #
 # ## See Also
 #
@@ -46,20 +57,15 @@
 #
 #   * https://www.topbug.net/blog/2013/04/14/install-and-use-gnu-command-line-tools-in-mac-os-x/
 #
-##
-
-##
-# Favorite 3 items
+# ## Tracking
 #
-# We want a terminal (iterm2), editor (vim), and browser (firefox).
-#
-# If you're on a rapid deadline, these are the three most important
-# for the kinds of programming work that we do regularly.
+# * Package: sixarm_brew_brewfile
+# * Version: 0.1.0
+# * Created: 2017-01-01
+# * Updated: 2017-01-02
+# * License: GPL
+# * Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
 ##
-
-
-# Our favorite editor
-cask 'vim'
 
 ##
 # Browsers
@@ -77,35 +83,14 @@ cask 'google-chrome'
 cask 'opera'
 
 ##
-# Shells
-#
-# We typically use bash, zsh, and fish.
-##
-
-# Bash is the Bourne Again SHell. Bash is an sh-compatible shell.
-brew 'bash'
-
-# TBD
-brew 'bash-completion'
-
-# TBD
-brew 'bashish'
-
-# Fish shell
-brew 'fish'
-
-# Zsh is a shell designed for interactive use.
-brew 'zsh'
-
-# Mobile Shell (MOSH) is like SSH plus roaming and smart echo.
-brew 'mobile-shell'
-
-##
 # Passwords
 #
 # We use password-manager applications with many of our projects.
 # If you don't use these, feel free to delete them.
 ##
+
+# Keybase.io digital signature manager
+brew 'keybase'
 
 # 1password is a password manager
 cask '1password'
@@ -113,8 +98,49 @@ cask '1password'
 # LastPass is a password manager
 cask 'lastpass'
 
-# Keybase.io digital signature manager
-brew 'keybase'
+##
+# Terminals
+#
+# We typically use `tmux`, and sometimes fall back on `screen`.
+##
+
+# iTerm is our favorite terminal app.
+cask 'iterm2'
+
+# Tmux is a newer terminal multiplexer.
+#
+# TODO:
+#
+#     brew 'pkg-config' && brew link pkg-config && brew 'tmux'
+#
+brew 'tmux'
+
+# Screen is an older terminal multiplexer.
+brew 'homebrew/dupes/screen'
+
+##
+# Shells
+#
+# We typically use bash, zsh, fish, and mosh.
+##
+
+# Bash is the Bourne Again SHell. Bash is an sh-compatible shell.
+brew 'bash'
+
+# Programmable completion functions for bash
+brew 'bash-completion'
+
+# Bashish is a theme enviroment for text terminals.
+brew 'bashish'
+
+# Zsh is a shell designed for interactive use.
+brew 'zsh'
+
+# Fish shell.
+brew 'fish'
+
+# Mobile Shell (MOSH) is like SSH plus roaming and smart echo.
+brew 'mobile-shell'
 
 ##
 # Editors
@@ -132,6 +158,11 @@ cask 'macvim'
 # Emacs editor
 cask 'emacs'
 
+# Emacs editor for Spacemacs
+# TODO: brew tap d12frosted/emacs-plus
+brew 'emacs-plus'
+# brew linkapps emacs-plus
+
 # Atom editor by GitHub
 cask 'atom'
 
@@ -143,6 +174,9 @@ cask 'sublime-text'
 
 # Enca - detect and convert encoding of text files
 brew 'enca'
+
+# MacTex: LaTeX document preparation system with high-quality typesetting.
+cask 'mactex'
 
 ##
 # Downloaders
@@ -164,6 +198,57 @@ brew 'httrack'
 
 # Wget is a free software package for retrieving files using HTTP and FTP.
 brew 'wget'
+
+##
+# Version control
+#
+# We prefer `git` version control. We also work on a wide
+# range of systems, so we also sometimes use CVS, HG, and SVN.
+##
+
+# CVS is a version control system.
+brew 'cvs'
+
+# Git is a free and open source distributed version control system.
+#
+# TODO: why do we need brew 'git' and also cask 'git'?
+brew 'git'
+cask 'git'
+
+# TODO
+brew 'git-cola'
+
+# Git extras: utilities including summary, repl, population, etc.
+cask 'git-extras'
+
+# Git extensions to provide high-level operations for Git Flow branching model.
+brew 'git-flow'
+
+# TODO
+brew 'git-ftp'
+
+# TODO
+brew 'git-gerrit'
+
+# TODO
+brew 'git-multipush'
+
+# TODO
+brew 'git-now'
+
+# TODO
+brew 'git-url-sub'
+
+# SourceTree graphic client for git
+cask 'sourcetree'
+
+# Mercurial version control system.
+brew 'hg'
+
+# Subversion version control system.
+#
+# TODO: brew 'sqlite' && brew 'subversion'
+brew 'subversion'
 
 ##
 # GNU command line tools
@@ -217,7 +302,7 @@ brew 'make'
 brew 'nano'
 
 ##
-# Operating-Related
+# System related
 #
 # These are fundamental operating system tools that we use often.
 ##
@@ -240,12 +325,6 @@ brew 'readline'
 # Parallel SSH
 brew 'pssh'
 
-##
-# Build tools
-#
-# These are helpers that are used by other apps and tools.
-##
-
 # pkg-config is a helper tool used when compiling applications and libraries.
 brew 'pkg-config'
 
@@ -254,36 +333,19 @@ brew 'pcre'
 brew 'pcre++'
 
 ##
-# Terminals
-#
-# We typically use `tmux`, and sometimes fall back on `screen`.
-##
-
-# iTerm is our favorite terminal app.
-cask 'iterm2'
-
-# Tmux is a newer terminal multiplexer.
-#
-# TODO:
-#
-#     brew 'pkg-config' && brew link pkg-config && brew 'tmux'
-#
-brew 'tmux'
-
-# Screen is an older terminal multiplexer.
-brew 'homebrew/dupes/screen'
-
-##
-# File compressors/uncompressors
+# File compression/uncompression
 #
 # We prefer `zstd` because it is the best modern compression.
 ##
 
+# Zstandard is the best modern compression
+brew 'zstd'
+
 # WinRAR provides compression/decompression for RAR and ZIP files.
 brew 'unrar'
 
-# Zstandard is the best modern compression
-brew 'zstd'
+# unzip is the classic command.
+brew 'homebrew/dupes/unzip'
 
 ##
 # File synchronization
@@ -314,57 +376,6 @@ cask 'transmission'
 cask 'box-sync'
 
 ##
-# Version control
-#
-# We prefer `git` version control. We also work on a wide
-# range of systems, so we also sometimes use CVS, HG, and SVN.
-##
-
-# CVS is a version control system.
-brew 'cvs'
-
-# Git is a free and open source distributed version control system.
-#
-# TODO: why do we need brew 'git' and also cask 'git'?
-brew 'git'
-cask 'git'
-
-# TBD
-brew 'git-cola'
-
-# Git extras: utilities including summary, repl, population, etc.
-cask 'git-extras'
-
-# Git extensions to provide high-level operations for Git Flow branching model.
-brew 'git-flow'
-
-# TBD
-brew 'git-ftp'
-
-# TBD
-brew 'git-gerrit'
-
-# TBD
-brew 'git-multipush'
-
-# TBD
-brew 'git-now'
-
-# TBD
-brew 'git-url-sub'
-
-# SourceTree graphic client for git
-cask 'sourcetree'
-
-# Mercurial version control system.
-brew 'hg'
-
-# Subversion version control system.
-#
-# TODO: brew 'sqlite' && brew 'subversion'
-brew 'subversion'
-
-##
 # Text search
 #
 # We prefer ripgrep because it is very fast and very safe.#
@@ -386,20 +397,51 @@ brew install sift
 brew 'jq'
 
 ##
+# Google software
+#
+# We use Chrome, Drive, Earth, Music, etc.
+##
+
+# Google Chrome web browser
+cask 'google-chrome'
+
+# Google Drive cloud file storage
+cask 'google-drive'
+
+# Google Earth viewer for satellite imagery and maps.
+cask 'google-earth'
+
+# Google Music plays songs, especially with a subscription service.
+cask 'google-music'
+
+# TDB
+cask 'google-notifier'
+
+# TDB
+cask 'google-quick-search-box'
+
+# TDB
+cask 'google-refine'
+
+# TDB
+cask 'google-web-designer'
+
+
+##################### TODO ####################################
 
 # GraphicsMagick is the swiss army knife of image processing.
 brew 'graphicsmagick'
 
-# TBD
+# TODO
 brew 'graphviz'
 
 # Gnuplot is a portable command-line driven graphing utility.
 brew 'gnuplot'
 
-# TBD
+# TODO
 brew 'html-xml-utils'
 
-# TBD
+# TODO
 brew 'lynx'
 
 # Most is a powerful paging program; compare `less` and `more`.
@@ -411,16 +453,16 @@ brew 'mutt'
 # Netcat is a networking utility for the TCP/IP protocol.
 brew 'netcat'
 
-# TBD
+# TODO
 brew 'ncdu'
 
-# TBD
+# TODO
 brew 'randomize-lines'
 
-# TBD
+# TODO
 brew 'rename'
 
-# TBD
+# TODO
 brew 'salt'
 
 # Tree is a directory lister that shows a tree outline
@@ -441,7 +483,7 @@ brew 'monit'
 # Nagios IT infrastructure monitoring.
 brew 'nagios'
 
-# TBD
+# TODO
 brew 'nginx'
 
 # Varnish reverse-proxy web application accelerator.
@@ -607,7 +649,6 @@ brew 'homebrew/dupes/tcl-tk'
 brew 'homebrew/dupes/tcpdump'
 brew 'homebrew/dupes/tidy'
 brew 'homebrew/dupes/units'
-brew 'homebrew/dupes/unzip'
 brew 'homebrew/dupes/whois'
 brew 'homebrew/dupes/zlib'
 
@@ -744,33 +785,7 @@ cask 'github'
 # TDB
 cask 'gitx'
 
-##
-# Google software
-##
-
-# Google Chrome web browser
-cask 'google-chrome'
-
-# Google Drive cloud file storage
-cask 'google-drive'
-
-# Google Earth viewer for satellite imagery and maps.
-cask 'google-earth'
-
-# Google Music plays songs, especially with a subscription service.
-cask 'google-music'
-
-# TDB
-cask 'google-notifier'
-
-# TDB
-cask 'google-quick-search-box'
-
-# TDB
-cask 'google-refine'
-
-# TDB
-cask 'google-web-designer'
+###################
 
 # TDB
 cask 'grooveshark'
@@ -808,46 +823,46 @@ cask 'little-snitch'
 # LibreOffice is a large editor for text, spreadsheets, diagrams.
 cask 'libreoffice'
 
-# TBD
+# TODO
 cask 'mysqlworkbench'
 
-# TBD
+# TODO
 cask 'p4merge'
 
 # Pandora music player
 cask 'pandora-one'
 
-# TBD
+# TODO
 cask 'paparazzi'
 
 # Prezi slide show presentation.
 cask 'prezi'
 
-# TBD
+# TODO
 cask 'pupil'
 
-# TBD
+# TODO
 cask 'quicksilver'
 
 # Rdio music player.
 cask 'rdio'
 
-# TBD
+# TODO
 cask 'rescuetime'
 
 # Screenhero screen sharing by Slack.
 cask 'screenhero'
 
-# TBD
+# TODO
 cask 'sequential'
 
-# TBD
+# TODO
 cask 'shortcat'
 
 # Silverlight video player by Microsoft.
 cask 'silverlight'
 
-# TBD
+# TODO
 cask 'skitch'
 
 # Skype calling with video and phone calls.
@@ -859,37 +874,37 @@ cask 'discord'
 # Slack chat client
 cask 'slack'
 
-# TBD
+# TODO
 cask 'sleep-monitor'
 
 # Sophos anti virus
 cask 'sophos-anti-virus-home-edition'
 
-# TBD
+# TODO
 cask 'sourcetree'
 
 # Spotify music player
 cask 'spotify'
 
-# TBD
+# TODO
 cask 'superduper'
 
 # Synergy screen sharing utility
 cask 'synergy'
 
-# TBD
+# TODO
 cask 'thisservice'
 
 # Thunderbird email client by Mozilla.
 cask 'thunderbird'
 
-# TBD
+# TODO
 cask 'transmit'
 
-# TBD
+# TODO
 cask 'todoist'
 
-# TBD
+# TODO
 cask 'todos'
 
 # Unison file synchronizer.
@@ -908,9 +923,7 @@ cask 'vlc'
 #
 # Applications that we want that are not on brew:
 #
-#   * Backblaze
 #   * Kiwix
-#   * Sublime Text
 #   * SoapUI
 #
 # Applications that we want that we need to find:
@@ -2038,7 +2051,6 @@ cask 'vlc'
 # brew 'unixodbc'
 # brew 'unp'
 # brew 'unpaper'
-# brew 'unrar'
 # brew 'unrtf'
 # brew 'unshield'
 # brew 'unyaffs'
@@ -2055,9 +2067,7 @@ cask 'vlc'
 # brew 'v8'
 # brew 'v8cgi'
 # brew 'vala'
-# brew 'valgrind'
 # brew 'valkyrie'
-# brew 'varnish'
 # brew 'vbindiff'
 # brew 'vcdimager'
 # brew 'vcftools'
@@ -2206,11 +2216,7 @@ cask 'vlc'
 # Use Homebrew to install our favorite typical-user packages
 # that may need to be installed manually because of passwords,
 # or moving files, or more-complex issues that need a human.
-#
 ##
-
-# Update - this is always the first step
-brew update
 
 ## Environment-related
 
@@ -2248,17 +2254,14 @@ cask 'unity3d'
 cask 'zoomus'
 
 
-## Mac App Stor
+## Mac App Store
 
-if command -v mas >/dev/null 2>&1; then
-  mas 'Numbers', id: 409203825
-  mas 'Pages', id: 409201541
-  mas 'Slack', id: 803453959
-  mas 'Sip', id: 507257563
-  mas 'Simplenote', id: 692867256
-  mas 'Todoist', id: 585829637
-fi
-
+mas 'Numbers', id: 409203825
+mas 'Pages', id: 409201541
+mas 'Slack', id: 803453959
+mas 'Sip', id: 507257563
+mas 'Simplenote', id: 692867256
+mas 'Todoist', id: 585829637
 
 ##
 # brew-install-our-stacks-automatically.sh
@@ -2282,9 +2285,6 @@ fi
 #   * `brew link pandoc` before shellcheck can be installed
 #
 ##
-
-# Update - this is always the first step
-brew update
 
 ##
 # System
@@ -2389,29 +2389,12 @@ cask 'corectl'
 cask 'kube-solo'
 
 ##
-# Editors
+# IDE
 ##
-
-# Emacs editor
-cask 'emacs'
-
-# Emacs editor for Spacemacs
-brew tap d12frosted/emacs-plus
-brew 'emacs-plus'
-brew linkapps emacs-plus
 
 # Eclipse is a large programming IDE built on Java
 cask 'eclipse-ide'
 cask 'eclipse-platform'
-
-# MacTex: LaTeX document preparation system with high-quality typesetting.
-cask 'mactex'
-
-# MacVIM
-cask 'macvin'
-
-# Sublime
-cask 'sublime'
 
 ##
 # Databases
@@ -2421,7 +2404,11 @@ cask 'sublime'
 # RabbitMQ, Redis, Riak, Sphinx, SQLite. Notably *not* MySQL.
 ##
 
-## Database-Related
+##
+# Databases
+#
+# We like PostgreSQL and a bunch of others.
+##
 
 # Cassandra database.
 brew 'cassandra'
@@ -2465,12 +2452,20 @@ brew 'sqlite && brew link sqlite'
 # ZeroMQ message queue
 brew 'zeromq'
 
-## Database searchers
+##
+# Database searchers
+#
+# TODO: add more here
+##
 
 # Sphinx search engine.
 brew link cmake; brew 'mysql; brew install postgresql; brew install sphinx'
 
-## Database managers
+##
+# Database managers
+#
+# TODO: add pgadmin etc.
+##
 
 # MySQL Workbench database editor.
 brew link cmake; cask 'mysqlworkbench'
@@ -2488,9 +2483,8 @@ cask 'toad'
 cask 'valentina-studio'
 
 ##
-# Markup Tooling
+# Markup languages
 #
-# This section installs markup tooling.
 # For example this section is a good place for HTML tools,
 # Markdown tools, UML tools, XML tools, and similar.
 ##
@@ -2520,7 +2514,7 @@ brew 'libxml2'
 brew 'libxslt'
 
 ##
-# Programming Languages
+# Programming languages
 #
 # This section installs many programming languages:
 # Clojure, Elixir, Erlang, Go, Haskell, Java, JavaScript,
