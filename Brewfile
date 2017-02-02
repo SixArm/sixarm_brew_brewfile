@@ -2626,6 +2626,11 @@ brew 'ruby'
 # Tool to install various implementations of Ruby.
 brew 'ruby-install'
 
+## Rust
+
+# Rust programming language
+brew 'rust'
+
 ## Scala
 
 # Scala programming language, that runs on top of the JVM.
