@@ -118,6 +118,10 @@ brew 'tmux'
 # Screen is an older terminal multiplexer.
 brew 'homebrew/dupes/screen'
 
+# tmate is a fork of tmux that makes screen sharing friendlier.
+brew 'tmate'
+    
+
 ##
 # Shells
 #
