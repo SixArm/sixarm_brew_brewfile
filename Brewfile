@@ -101,13 +101,14 @@ cask 'lastpass'
 ##
 # Terminals
 #
-# We typically use `tmux`, and sometimes fall back on `screen`.
+# We typically use `tmux` and `tmate`,
+# and sometimes fall back on `screen`.
 ##
 
 # iTerm is our favorite terminal app.
 cask 'iterm2'
 
-# Tmux is a newer terminal multiplexer.
+# tmux is a newer terminal multiplexer.
 #
 # TODO:
 #
@@ -115,12 +116,12 @@ cask 'iterm2'
 #
 brew 'tmux'
 
+# tmate is a fork of tmux that makes screen sharing friendlier.
+brew 'tmate'
+
 # Screen is an older terminal multiplexer.
 brew 'homebrew/dupes/screen'
 
-# tmate is a fork of tmux that makes screen sharing friendlier.
-brew 'tmate'
-    
 
 ##
 # Shells
