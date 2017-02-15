@@ -246,6 +246,9 @@ brew 'git-now'
 # TODO
 brew 'git-url-sub'
 
+# GitUp friendly Git interface and visualizer
+cask 'gitup'
+
 # SourceTree graphic client for git
 cask 'sourcetree'
 
