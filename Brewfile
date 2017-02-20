@@ -487,6 +487,9 @@ brew 'xclip'
 brew 'docker'
 brew 'boot2docker'
 
+# Consul tool for discovering and configuring services in your infrastructure.
+brew 'consul'
+
 # Monit is for managing and monitoring Unix systems.
 brew 'monit'
 
