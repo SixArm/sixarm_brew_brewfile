@@ -2388,6 +2388,7 @@ cask 'docker'
 
 # Vagrant creates and configures portable development environments.
 cask 'vagrant'
+cask 'vagrant-manager'
 
 # VirtualBox creates and configures portable development environments, by Oracle.
 cask 'virtualbox'
