@@ -2356,6 +2356,10 @@ cask 'charles'
 # Apache Maven is a software project management and comprehension tool.
 brew 'maven'
 
+# Apache Spark is for analytics
+brew 'apache-spark'
+  
+  
 ##
 # Mac programming
 ##
@@ -2696,7 +2700,6 @@ brew 'awless'
 # Heroku app hosting
 brew install heroku
 
-#
 ##
 # Art editors
 ##
