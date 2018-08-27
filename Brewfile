@@ -60,9 +60,9 @@
 # ## Tracking
 #
 # * Package: sixarm_brew_brewfile
-# * Version: 0.1.0
+# * Version: 1.0.0
 # * Created: 2017-01-01
-# * Updated: 2017-01-02
+# * Updated: 2018-08-27T23:58:20Z
 # * License: GPL
 # * Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
 ##
@@ -107,6 +107,9 @@ cask 'lastpass'
 
 # iTerm is our favorite terminal app.
 cask 'iterm2'
+
+# bat is like `cat` plus line numbers, syntax highlighting, and more.
+brew 'bat'
 
 # tmux is a newer terminal multiplexer.
 #
