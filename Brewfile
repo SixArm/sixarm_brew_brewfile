@@ -469,6 +469,9 @@ brew 'mutt'
 # Netcat is a networking utility for the TCP/IP protocol.
 brew 'netcat'
 
+# prettyping: ping with colorful output and progress bars
+brew install prettyping
+
 # TODO
 brew 'ncdu'
 
