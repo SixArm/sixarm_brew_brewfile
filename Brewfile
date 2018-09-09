@@ -410,7 +410,7 @@ brew 'ag'
 brew install sift
 
 # xsv is for CSV file parsing, and is fast, full featured, and flexible.
-brew install xsv
+brew 'xsv'
 
 # jq is a lightweight and flexible command-line JSON processor.
 brew 'jq'
