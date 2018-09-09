@@ -409,6 +409,9 @@ brew 'ag'
 # sift is like grep, plus faster and with more features; retired by ripgrep.
 brew install sift
 
+# xsv is for CSV file parsing, and is fast, full featured, and flexible.
+brew install xsv
+
 # jq is a lightweight and flexible command-line JSON processor.
 brew 'jq'
 
