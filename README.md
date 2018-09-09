@@ -1,4 +1,4 @@
-# SixArm.com » Brew » <br> Brewfile of recipies, casks, apps
+# SixArm.com → Brew →<br> Brewfile of recipes, casks, apps
 
 * Docs: <http://sixarm.com/sixarm_brew_brewfile/doc>
 * Repo: <http://github.com/sixarm/sixarm_brew_brewfile>
