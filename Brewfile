@@ -412,6 +412,9 @@ brew install sift
 # xsv is for CSV file parsing, and is fast, full featured, and flexible.
 brew 'xsv'
 
+# Tad is CSV viewer with features for pivot, search, etc.
+cask 'tad'
+
 # jq is a lightweight and flexible command-line JSON processor.
 brew 'jq'
 
