@@ -2541,6 +2541,9 @@ cask 'macdown'
 # StarUML modeling tool
 cask 'staruml'
 
+# PlantUML markup text to diagram
+brew 'plantuml'
+
 ## XML
 
 # XML converter
