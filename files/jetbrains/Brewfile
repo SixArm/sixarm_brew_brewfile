@@ -1,0 +1,31 @@
+##
+# JetBrains
+#
+# JetBrains is paid software suitable for professional programmers,
+# such as Integrated Development Environments (IDEs) for popular
+# programming languages, including Java, Python, Ruby, PHP, etc.
+##
+
+# AppCode Swift IDE
+cask 'appcode'
+
+# CLion C/C++ IDE
+cask 'clion'
+
+# DataGrip SQL IDE
+cask 'datagrip'
+
+# IntelliJ Java IDE
+cask 'intellij-idea'
+
+# PhpStorm PHP IDE
+cask 'phpstorm'
+
+# PyCharm Python IDE
+cask 'pycharm'
+
+# RubyMine Ruby IDE
+cask 'rubymine'
+
+# WebStorm IDE
+cask 'webstorm'

@@ -1,0 +1,29 @@
+##
+# Google software
+#
+# We use Chrome, Drive, Earth, Music, etc.
+##
+
+# Google Chrome web browser
+cask 'google-chrome'
+
+# Google Drive cloud file storage
+cask 'google-drive'
+
+# Google Earth viewer for satellite imagery and maps.
+cask 'google-earth'
+
+# Google Music plays songs, especially with a subscription service.
+cask 'google-music'
+
+# TDB
+cask 'google-notifier'
+
+# TDB
+cask 'google-quick-search-box'
+
+# TDB
+cask 'google-refine'
+
+# TDB
+cask 'google-web-designer'

@@ -1,0 +1,17 @@
+##
+# OmniGroup
+#
+# OmniGroup provides paid software suitable for professional users.
+##
+
+# To do list task manager
+cask 'omnifocus'
+
+# Diagramming
+cask 'omnigraffle'
+
+# Project management planning
+cask 'omniplan'
+
+# Outliner
+cask 'omnioutliner'
