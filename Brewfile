@@ -2488,6 +2488,19 @@ cask 'toad'
 cask 'valentina-studio'
 
 ##
+# Data analytics
+##
+
+# Elasticsearch is a real-time, distributed storage, search, and analytics engine.
+brew 'elasticsearch'
+
+# Logstash helps parse, enrich, transform, and buffer data from a variety of sources.
+brew 'logstash'
+
+# Kibana is an open source analytics and visualization platform designed to work with Elasticsearch. 
+brew 'kibana'
+
+##
 # Markup languages
 #
 # For example this section is a good place for HTML tools,
