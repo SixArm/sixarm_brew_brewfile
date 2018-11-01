@@ -324,6 +324,9 @@ brew 'automake'
 # GNU Privacy Guard (GnuPG) provides encryption as a free replacement for PGP.
 brew 'gpg'
 
+# GNU Privacy Guard (GnuPG) PIN entry for macOS to do GPG terminal decryption
+brew 'pinentry-mac'
+
 # OpenSSL is an open-source implementation of the SSL and TLS protocols.
 brew 'openssl'
 
