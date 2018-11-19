@@ -77,6 +77,10 @@ cask 'firefox'
 # Opera web browser
 #cask 'opera'
 
+# Brow.sh text browser
+#tap 'browsh-org/homebrew-browsh'
+#brew 'browsh'
+
 ##
 # Passwords
 #
