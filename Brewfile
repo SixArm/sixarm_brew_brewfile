@@ -2416,12 +2416,6 @@ cask 'eclipse-platform'
 # RabbitMQ, Redis, Riak, Sphinx, SQLite. Notably *not* MySQL.
 ##
 
-##
-# Databases
-#
-# We like PostgreSQL and a bunch of others.
-##
-
 # Cassandra database.
 brew 'cassandra'
 
@@ -2445,6 +2439,10 @@ brew 'postgresql'
 
 # Postgres App provides a Mac-friendly database.
 cask 'postgres'
+
+# Prisma replaces traditional ORMs and adds GraphQL
+tap 'prisma/prisma'
+brew 'prisma'
 
 # Postgres admin GUI
 brew 'pgadmin3'
