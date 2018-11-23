@@ -350,6 +350,9 @@ brew 'pkg-config'
 brew 'pcre'
 brew 'pcre++'
 
+# fd: a simple, fast and user-friendly alternative to find.
+brew 'fd'
+
 ##
 # File compression/uncompression
 #
