@@ -423,8 +423,9 @@ cask 'tad'
 # jq is a lightweight and flexible command-line JSON processor.
 brew 'jq'
 
-
-##################### TODO ####################################
+##
+# Images
+##
 
 # GraphicsMagick is the swiss army knife of image processing.
 brew 'graphicsmagick'
@@ -434,6 +435,13 @@ brew 'graphviz'
 
 # Gnuplot is a portable command-line driven graphing utility.
 brew 'gnuplot'
+
+# yEd is desktop application to generate high-quality diagrams.
+cask 'yed'
+
+
+##################### TODO ####################################
+
 
 # TODO
 brew 'html-xml-utils'
