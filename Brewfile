@@ -439,6 +439,47 @@ brew 'gnuplot'
 # yEd is desktop application to generate high-quality diagrams.
 cask 'yed'
 
+##
+# Server-Related
+##
+
+# Docker software containers to help distribute applications.
+brew 'docker'
+
+# Compose is a tool for defining and running multi-container Docker applications.
+brew 'docker-compose'
+
+# Docker Machine installs Docker Engine on virtual hosts, and manages the hosts.
+brew 'docker-machine'
+
+# Consul tool for discovering and configuring services in your infrastructure.
+brew 'consul'
+
+# Monit is for managing and monitoring Unix systems.
+brew 'monit'
+
+# Nagios IT infrastructure monitoring.
+brew 'nagios'
+
+# NGINX web server.
+brew 'nginx'
+
+# Varnish reverse-proxy web application accelerator.
+brew 'varnish'
+
+##
+# Font-Related
+##
+
+# Fontconfig is a library for configuring and customizing font access.
+brew 'fontconfig'
+
+# FreeType is a freely available software library to render fonts.
+brew 'freetype'
+
+# Command-line programs for manipulating fonts
+brew 'lcdf-typetools'
+
 
 ##################### TODO ####################################
 
@@ -479,33 +520,6 @@ brew 'tree'
 # xclip is a command line interface to the X11 clipboard.
 brew 'xclip'
 
-## Server-Related
-
-# Docker software containers to help distribute applications.
-brew 'docker'
-brew 'boot2docker'
-
-# Compose is a tool for defining and running multi-container Docker applications.
-brew 'docker-compose'
-
-# Docker Machine installs Docker Engine on virtual hosts, and manages the hosts.
-brew 'docker-machine'
-
-# Consul tool for discovering and configuring services in your infrastructure.
-brew 'consul'
-
-# Monit is for managing and monitoring Unix systems.
-brew 'monit'
-
-# Nagios IT infrastructure monitoring.
-brew 'nagios'
-
-# TODO
-brew 'nginx'
-
-# Varnish reverse-proxy web application accelerator.
-brew 'varnish'
-
 ## Media-Related
 
 brew 'exif'
@@ -518,16 +532,6 @@ brew 'ffmpegthumbnailer'
 brew 'imagemagick'
 brew 'kindle'
 brew 'theora'
-
-##
-# Font-Related
-##
-
-# Fontconfig is a library for configuring and customizing font access.
-brew 'fontconfig'
-
-# FreeType is a freely available software library to render fonts.
-brew 'freetype'
 
 ##
 # Image-Related
@@ -2317,9 +2321,6 @@ cask 'xquartz'
 
 # Code Climate Platform for all static analysic
 brew tap codeclimate/formulas && brew 'codeclimate'
-
-# Command-line programs for manipulating fonts
-brew 'lcdf-typetools'
 
 ##
 # Shell
