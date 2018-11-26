@@ -2812,6 +2812,9 @@ brew 'libv8'
 # YAML markup language
 brew 'libyaml'
 
+# YAML lint validator
+brew 'yamllint'
+
 # ZIP file compression
 brew 'libzip'
 
