@@ -426,6 +426,9 @@ cask 'tad'
 # jq is a lightweight and flexible command-line JSON processor.
 brew 'jq'
 
+# fx is a command-line JSON processor with interactivity.
+brew 'fx'
+
 ##
 # Images
 ##
