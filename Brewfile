@@ -55,9 +55,9 @@
 # ## Tracking
 #
 # * Package: sixarm_brew_brewfile
-# * Version: 2.0.0
+# * Version: 2.1.0
 # * Created: 2017-01-01
-# * Updated: 2018-09-28T16:19:03Z
+# * Updated: 2018-12-04T05:05:47Z
 # * License: GPL
 # * Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
 ##
@@ -207,6 +207,9 @@ brew 'httrack'
 
 # Wget is a free software package for retrieving files using HTTP and FTP.
 brew 'wget'
+
+# GNU inetutils contains telnet, ftp, etc.
+brew 'inetutils'
 
 ##
 # Version control
