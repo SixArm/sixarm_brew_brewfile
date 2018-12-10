@@ -2874,6 +2874,18 @@ cask 'vagrant'
 # Heroku hosting utilities
 cask 'heroku-toolbelt'
 
+## Testing
+
+# Selenium standalone server
+brew 'selenium-server-standalone'
+
+# Selenium webdriver for Chrome browser
+brew 'chromedriver'
+
+# Selenimum webdriver for Firefox browser
+brew 'geckodriver'
+
+
 ########################### TODO ############################################
 
 ## Utility-Related
