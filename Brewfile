@@ -72,7 +72,7 @@
 cask 'firefox'
 
 # Google Chrome web browser
-#cask 'google-chrome'
+cask 'google-chrome'
 
 # Opera web browser
 #cask 'opera'
@@ -87,6 +87,9 @@ cask 'firefox'
 # We use password-manager applications with many of our projects.
 # If you don't use these, feel free to delete them.
 ##
+
+# Pass, a Unix password manager
+brew 'pass'
 
 # Keybase.io digital signature manager
 brew 'keybase'
