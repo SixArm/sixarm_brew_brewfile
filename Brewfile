@@ -165,7 +165,7 @@ brew 'vim'
 cask 'macvim'
 
 # Emacs editor
-cask 'emacs'
+cask 'emacs-plus'
 
 # Emacs editor for Spacemacs
 # TODO: brew tap d12frosted/emacs-plus
@@ -425,9 +425,6 @@ cask 'tad'
 
 # jq is a lightweight and flexible command-line JSON processor.
 brew 'jq'
-
-# fx is a command-line JSON processor with interactivity.
-brew 'fx'
 
 ##
 # Images
