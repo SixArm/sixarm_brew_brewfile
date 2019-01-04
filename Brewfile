@@ -2706,6 +2706,11 @@ brew 'taylor'
 # Testflight Apple iOS testing service
 cask 'testflight'
 
+## Tooling
+
+# Jenkins open source automation server for continuous integration
+brew 'jenkins'
+
 ##
 # Platforms
 ##
