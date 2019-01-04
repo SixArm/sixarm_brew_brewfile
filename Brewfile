@@ -55,9 +55,9 @@
 # ## Tracking
 #
 # * Package: sixarm_brew_brewfile
-# * Version: 2.1.0
+# * Version: 2.2.0
 # * Created: 2017-01-01
-# * Updated: 2018-12-04T05:05:47Z
+# * Updated: 2019-01-04T01:54:45Z
 # * License: GPL
 # * Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
 ##
@@ -2857,6 +2857,9 @@ cask 'nmap'
 
 # Wireshark network protocol analyzer
 cask 'wireshark'
+
+# Certbot: automatically enable HTTPS on your website via Let's Encrypt
+brew 'certbot'
 
 ## Programming
 
