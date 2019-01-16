@@ -418,7 +418,7 @@ brew 'grep'
 brew 'ag'
 
 # sift is like grep, plus faster and with more features; retired by ripgrep.
-brew install sift
+brew 'sift'
 
 # xsv is for CSV file parsing, and is fast, full featured, and flexible.
 brew 'xsv'
@@ -506,7 +506,7 @@ brew 'mutt'
 brew 'netcat'
 
 # prettyping: ping with colorful output and progress bars
-brew install prettyping
+brew 'prettyping'
 
 # TODO
 brew 'ncdu'
@@ -1024,11 +1024,6 @@ cask 'vlc'
 #   * TextEdit
 ##
 
-# brew 'aws-cfn-tools'
-# brew 'aws-cloudsearch'
-# brew 'aws-elasticache'
-# brew 'aws-iam-tools'
-# brew 'aws-sns-cli'
 # brew 'dart'
 # brew 'json-c'
 # brew 'json-glib'
@@ -2486,8 +2481,11 @@ brew 'zeromq'
 # TODO: add more here
 ##
 
-# Sphinx search engine.
-brew link cmake; brew 'mysql; brew install postgresql; brew install sphinx'
+# Sphinx search engine, which runs on top of MySQL and/or PostgreSQL
+brew 'cmake', link: true
+brew 'mysql'
+brew 'postgresql'
+brew 'sphinx'
 
 ##
 # Database managers
@@ -2715,15 +2713,18 @@ brew 'jenkins'
 # Platforms
 ##
 
+# Azure by Microsoft
+brew 'azure-cli'
+
 # Amazon Web Services (AWS) Command Line Interface (CLI)
-brew install awscli
+brew 'awscli'
 
 # AWS command line tools
 brew tap wallix/awless
 brew 'awless'
 
 # Heroku app hosting
-brew install heroku
+brew 'heroku'
 
 ##
 # Art editors
