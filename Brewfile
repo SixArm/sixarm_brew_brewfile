@@ -94,10 +94,13 @@ brew 'pass'
 # Keybase.io digital signature manager
 brew 'keybase'
 
-# 1password is a password manager
+# Authy password manager
+cask 'authy'
+
+# 1password password manager
 cask '1password'
 
-# LastPass is a password manager
+# LastPass password manager
 cask 'lastpass'
 
 ##
